@@ -7,6 +7,6 @@ import { BlogDestinationCardComponent } from './components/blog-destination-card
 @NgModule({
   declarations: [FooterComponent, NavBarComponent, BlogDestinationCardComponent],
   imports: [CommonModule],
-  exports: [FooterComponent, NavBarComponent],
+  exports: [FooterComponent, NavBarComponent, BlogDestinationCardComponent],
 })
-export class SharedModule {}
+export class SharedModule { }
