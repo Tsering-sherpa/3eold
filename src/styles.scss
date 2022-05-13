@@ -2,3 +2,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// adding custom font here
+@font-face {
+    font-family: "Lufga";
+    src: local("Lufga"), url(assets/fonts/Fontspring-DEMO-lufga-regular.otf) format("opentype"),
+        url(assets/fonts/Fontspring-DEMO-lufga-medium.otf) format("opentype"),
+        url(assets/fonts/Fontspring-DEMO-lufga-semibold.otf) format("opentype"),
+        url(assets/fonts/Fontspring-DEMO-lufga-thin.otf) format("opentype");
+}
+
+body {
+    font-family: Lufga, sans-serif;
+}
