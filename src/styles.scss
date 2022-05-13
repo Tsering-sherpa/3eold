@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+// adding custom font here
+@font-face {
+    font-family: "Lufga";
+    src: local("Lufga"), url(assets/fonts/Fontspring-DEMO-lufga-regular.otf) format("opentype"),
+        url(assets/fonts/Fontspring-DEMO-lufga-medium.otf) format("opentype"),
+        url(assets/fonts/Fontspring-DEMO-lufga-semibold.otf) format("opentype"),
+        url(assets/fonts/Fontspring-DEMO-lufga-thin.otf) format("opentype");
+}
+
+body {
+    .content {
+        font-family: Lufga, sans-serif;
+    }
+}
