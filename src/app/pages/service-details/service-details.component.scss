@@ -1,0 +1,24 @@
+.hero {
+  position: relative;
+
+  .hero-img {
+    filter: brightness(50%);
+  }
+
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    font-size: 2.5rem;
+  }
+}
+
+.desc {
+  margin-top: 1.25rem;
+}
+
+.details-container,
+.title,
+.services {
+  margin: 2rem 2.5rem;
+}
