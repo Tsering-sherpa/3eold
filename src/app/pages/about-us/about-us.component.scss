@@ -19,19 +19,6 @@
 }
 .about-us-container {
   margin: 40px 66px;
-  .about-us {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    .about-us-details {
-      margin-left: 60px;
-      width: 600px;
-      h3,
-      p {
-        margin-top: 20px;
-      }
-    }
-  }
 }
 
 .stories {
@@ -76,4 +63,21 @@
 .box {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.mission {
+  margin: 40px 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .mission-container {
+    width: 48%;
+    padding: 20px 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+      rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+  }
+  .mission-desc {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+  }
 }
