@@ -30,6 +30,10 @@ export class AuthService {
     localStorage.setItem(this.accessTokenKey, token);
   }
 
+  setRefreshToken(token: string): void {
+    localStorage.setItem(this.refreshTokenKey, token);
+  }
+
   clearTokens(): void {
     localStorage.removeItem(this.accessTokenKey);
     localStorage.removeItem(this.refreshTokenKey);
@@ -63,8 +67,8 @@ export class AuthService {
 
   // Method to handle user login (assuming you get the tokens from the server upon successful login)
 
-  login(username: string, password: string): Observable<boolean> {
-    return this.http.post<any>(this.authUrl, { username, password }).pipe(
+  login(params): Observable<boolean> {
+    return this.http.post<any>(this.authUrl, params).pipe(
       tap((response) => {
         // Save the access and refresh tokens to the storage
         this.setAccessToken(response.access);

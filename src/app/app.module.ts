@@ -43,8 +43,9 @@ import { NotificationDropdownComponent } from "./components/dropdowns/notificati
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 import { SharedModule } from "./shared/shared.module";
-import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from "@angular/common/http";
 import { AuthInterceptor } from "./shared/inteceptor/auth-inteceptor";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -78,7 +79,7 @@ import { AuthInterceptor } from "./shared/inteceptor/auth-inteceptor";
     LoginComponent,
     IndexComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, SharedModule],
+  imports: [BrowserModule, AppRoutingModule, SharedModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
