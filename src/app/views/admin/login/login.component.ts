@@ -1,6 +1,6 @@
 import { subscribedContainerMixin } from './../../../shared/subscribedContainer.mixin';
 import { Component, OnInit } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
 import { takeUntil } from 'rxjs/operators';
 import { AuthService } from "src/app/shared/services/auth.service";
@@ -10,9 +10,9 @@ import { AuthService } from "src/app/shared/services/auth.service";
   templateUrl: "./login.component.html",
 })
 export class LoginComponent extends subscribedContainerMixin() implements OnInit {
-  public loginForm: FormGroup;
+  public loginForm: UntypedFormGroup;
   
-  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
+  constructor(private fb: UntypedFormBuilder, private authService: AuthService, private router: Router) {
     super();
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
